@@ -1,0 +1,851 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header-nav {
+    background: rgb(242, 242, 242);
+    background: linear-gradient(0deg, rgba(242, 242, 242, 0.751313025210084) 0%, rgba(245, 245, 245, 0.7261029411764706) 100%);
+    border-bottom: 1px solid #d1d1d1;
+    width: 100vw;
+    padding: 20px 30px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4px;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    margin-right: 4rem;
+    text-wrap: nowrap;
+}
+
+.nav-menu li {
+    list-style: none;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-menu a:hover {
+    color: #000000;
+    transition: 0.3s;
+    text-shadow: 1px 1px 1px #464646;
+}
+
+#home {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 20vw;
+    border: 1px solid #000;
+    border-radius: 0;
+    background-color: #ffffff;
+}
+
+#home a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+#home a:hover {
+    color: #000000;
+    transition: 0.3s;
+    text-shadow: 2px 2px #adadad;
+}
+
+#enquire-now {
+    border: 1px solid #eeeeee;
+    background-color: #eeeeee;
+    border-radius: 6px;
+}
+
+#enquire-now a:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+#enquire-now:hover {
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+#sign-in {
+    border: 1px solid #aaaaaa;
+    background-color: #e1e1e1;
+    border-radius: 6px;
+}
+
+#sign-in a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#sign-in a:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+#sign-in:hover {
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+#register {
+    border: 1px solid #000000;
+    background-color: #000000;
+    border-radius: 6px;
+}
+
+#register a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#register a:hover {
+    color: #000000;
+    transition: 0.3s;
+}
+
+#register:hover {
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.sidebar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    background: rgb(230, 230, 230);
+    background: linear-gradient(0deg, rgba(230, 230, 230, 0.751313025210084) 0%, rgba(240, 240, 240, 0.7261029411764706) 100%);
+    border-top: 1px solid #d1d1d1;
+    padding: 20px 30px;
+}
+
+.footer-section {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: flex-start;
+}
+
+.social-links {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social-links img {
+    width: 2.5rem;
+    height: auto;
+    padding: 10px;
+}
+
+.footer-home-icon {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 10px;
+}
+
+.footer-home-icon a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 0;
+    border: 1px solid #000;
+    border-radius: 0;
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+    background-color: #ffffff;
+}
+
+.footer-home-icon a:hover {
+    color: #000000;
+    transition: 0.3s;
+    text-shadow: 2px 2px #adadad;
+}
+
+.quick-links {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: top;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding-right: 6rem;
+    margin-left: 2rem;
+}
+
+.quick-links li {
+
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.quick-links a:hover {
+    color: #000000;
+    transition: 0.3s;
+    text-shadow: 1px 1px #adadad;
+}
+
+.container {
+    height: fit-content;
+    width: 100vw;
+}
+
+/* For index page */
+.hero {
+    background: url("catbg3.png") no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    color: #000000;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero-text h1 {
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #00203b;
+    opacity: 85%;
+    border-bottom: 1px solid #00203b;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.hero-text button {
+    padding: 4px 10px;
+    font-size: 1.2rem;
+}
+
+.hero-image {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.testimonials-container {
+    margin: 2rem;
+}
+
+.testimonials-heading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonials-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 2fr);
+}
+
+/* About Us page */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40vw;
+    height: fit-content;
+    text-align: justify;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: 70vh;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Contact page */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-map {
+    display: flex;
+    width: 50%;
+    height: fit-content;
+
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40vw;
+    height: fit-content;
+}
+
+/* Courses page */
+.course-container {
+    margin: 3rem;
+}
+
+.course-heading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.courses-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.course-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    height: fit-content;
+    font-size: 1.2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.course-item h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.course-item button {
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
+
+.course-item button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.course-item button a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.course-item button a:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+/* Course registration */
+.course-register-heading {
+    text-align: center;
+}
+
+.course-register-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.course-register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+.course-register-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40vw;
+    align-self: center;
+}
+
+.course-register-dropdown-menu {
+    display: none;
+    position: relative;
+    top: -2.5vh;
+    left: 0%;
+    width: 108%;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    margin: 0;
+    padding: 0;
+}
+
+.course-register-dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.course-register-dropdown-menu .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.course-register-dropdown-menu .dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.course-register-dropdown-toggle img {
+    width: 1.5rem;
+    height: auto;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.rotate-chevron {
+    transform: rotate(180deg);
+}
+
+.course-register-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 6rem;
+    margin-left: 6rem;
+    width: 40vw;
+}
+
+.course-register-dropdown-toggle:hover {
+    background-color: #f9f9f9;
+}
+
+.course-register-dropdown-toggle img {
+    width: 1.5rem;
+    height: auto;
+    margin-left: 10px;
+}
+
+.dropdown-item {
+    list-style: none;
+}
+
+.course-register-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.course-register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    margin: 0;
+    width: fit-content;
+}
+
+.course-register-form label {
+    font-size: 1rem;
+    margin: 10px;
+    align-self: flex-start;
+}
+
+.course-register-form input {
+    padding: 0.4rem;
+    margin: 10px;
+    width: 30vw;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+}
+
+.course-register-form button {
+    padding: 0.4rem;
+    margin: 10px;
+    border: 1.5px solid rgb(71, 71, 71);
+    border-radius: 6px;
+    background-color: #000000;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.course-register-form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: fit-content;
+    vertical-align: bottom;
+}
+
+.checkbox-container label[for="terms"] {
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+/* Signin page */
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.signin-heading {
+    text-align: center;
+}
+
+.signin-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 0;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    margin: 0;
+    width: fit-content;
+}
+
+.signin-form label {
+    font-size: 1rem;
+    margin: 10px;
+    align-self: flex-start;
+}
+
+.signin-form input {
+    padding: 0.4rem;
+    margin: 10px;
+    width: 30vw;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+}
+
+.signin-form button {
+    padding: 0.4rem;
+    margin: 10px;
+    border: 1.5px solid rgb(71, 71, 71);
+    border-radius: 6px;
+    background-color: #000000;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.signin-form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Register page */
+.register-account-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.register-account-heading {
+    text-align: center;
+}
+
+.register-account-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 0;
+}
+
+.register-account-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.register-account-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    margin: 0;
+    width: fit-content;
+}
+
+.register-account-form label {
+    font-size: 1rem;
+    margin: 10px;
+    align-self: flex-start;
+}
+
+.register-account-form input {
+    padding: 0.4rem;
+    margin: 10px;
+    width: 30vw;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+}
+
+.register-account-form button {
+    padding: 0.4rem;
+    margin: 10px;
+    border: 1.5px solid rgb(71, 71, 71);
+    border-radius: 6px;
+    background-color: #000000;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.register-account-form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-nav {
+        position: relative;
+        padding: 0;
+    }
+
+    .nav-menu {
+        background-color: #ffffff;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        width: fit-content;
+        position: absolute;
+        z-index: 1;
+        font-size: 1.2rem;
+    }
+
+    .nav-menu li {
+        padding: 10px 20px;
+        border-bottom: #363636;
+    }
+
+    .nav-menu #home {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #burger-menu {
+        height: 1.6rem;
+        width: 1.6rem;
+        cursor: pointer;
+    }
+
+    #home {
+        font-size: 2rem;
+        margin-right: 0;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .quick-links ul {
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-details {
+        width: 80vw;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .contact-map {
+        width: 80vw;
+    }
+
+    .about-details {
+        width: 80vw;
+    }
+
+    .about-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .about-img {
+        width: fit-content;
+        height: 50vh;
+        overflow: hidden;
+        margin: 2rem;
+    }
+
+    .course-register-form input {
+        width: 60vw;
+    }
+
+    .signin-form input {
+        width: 60vw;
+    }
+
+    .register-account-form input {
+        width: 60vw;
+    }
+
+    @media (max-width: 480px) {
+        .header-nav {
+            position: relative;
+        }
+
+        .header-nav ul {
+            font-size: 14px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero {
+            height: 30vh;
+            padding: 60px 0;
+        }
+
+        .hero-text p {
+            font-size: 0.9rem;
+        }
+
+        .contact-container {
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+        }
+
+        .about-container {
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .course-register-form input {
+            width: 60vw;
+        }
+    }
+}

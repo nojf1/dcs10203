@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <nav class="header-nav">
+        <div class="mobile-nav">
+            <img id="burger-menu" src="burger.svg" alt="burger menu icon">
+            <p id="home"><a href="index.html">ABC</a></p>
+            <p>EN</p>
+        </div>
+        <ul class="nav-menu">
+            <li id="home"><a href="index.html">ABC</a></li>
+            <li id="enquire-now"><a href="">Enquire Now</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="courseregister.html">Course Registration</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="sign-in"><a href="signin.html">Sign in</a></li>
+            <li id="register"><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <div class="contact-container">
+            <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778254.5758050364!2d-70.5260473084517!3d25.02533943505941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89451ab5034cb7ab%3A0xb600ecf3df7aca4d!2sBermuda%20Triangle!5e0!3m2!1sen!2smy!4v1721276242146!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-details">
+            <h1>Contact Us</h1>
+            <p>For any enquiries, please contact us at: 0123456789</p>
+            <p>Or send us an email at: <a href="mailto:meowmeow@meow.com">meowmeow@meow.com</a></p>
+            <p>We would be happy serve you at any time.</p>
+            <p>Our telephone line is open 24/7 and our email helpdesk will reply as soon as possible.</p>
+            <p>Our main office is open from Monday to Friday at 9:00am to 8:00pm.</p>
+            <p>We strive to give our customers the best experience possible, any feedback will be greatly appreciated.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="social-links">
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img src="twitter.svg" alt="twitter icon"></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="youtube.svg" alt="youtube icon"></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="instagram.svg" alt="instagram icon"></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="linkedin.svg" alt="linkedin icon"></a>
+            </div>
+            <div class="footer-home-icon">
+                <a href="index.html">ABC</a>
+                <p>©Copyright 2024 ABC Learning Center</p>
+            </div>
+        </div>
+        <div class="quick-links">
+            <ul>
+                <li><strong>Courses</strong></li><br>
+                <li><a href="courseregister.html">Programming in Java</a></li>
+                <li><a href="courseregister.html">Programming in .NET</a></li>
+                <li><a href="courseregister.html">Structuring with HTML</a></li>
+                <li><a href="courseregister.html">Styling with CSS</a></li>
+                <li><a href="courseregister.html">Learning Microsoft Word</a></li>
+                <li><a href="courses.html"><u>See all</u></a></li>
+            </ul>
+            <ul>
+                <li><strong>Explore</strong></li><br>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+            <ul>
+                <li><strong>Resources</strong></li><br>
+                <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#burger-menu").click(function () {
+            $(".nav-menu").slideToggle("fast");
+        });
+    });
+</script>
+
+</html>
