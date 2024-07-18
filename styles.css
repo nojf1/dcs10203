@@ -278,13 +278,27 @@ body {
 
 .testimonials-heading {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
 
-.testimonials-grid-container {
+.testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 2fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+}
+
+.testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1rem;
+    padding: 1.2rem;
+    margin: 1rem;
 }
 
 /* About Us page */
@@ -700,7 +714,72 @@ body {
     cursor: pointer;
 }
 
+/* Privacy policy page */
+.privacy-policy-container {
+    margin: 2rem;
+}
 
+.privacy-policy-heading {
+    text-align: center;
+}
+
+.privacy-policy-heading h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 0;
+}
+
+.accordion-header {
+    margin-bottom: 2rem;
+}
+
+/* Sitemap page */
+.sitemap-container {
+    margin: 2rem;
+}
+
+.sitemap-heading {
+    text-align: center;
+}
+
+.sitemap-heading h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.sitemap-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    vertical-align: top;
+    margin: 2rem;
+}
+
+.sitemap-items {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-right: 4rem;
+}
+
+.sitemap-items li {
+    list-style: none;
+    padding: 10px;
+}
+
+.sitemap-items a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.sitemap-items a:hover {
+    color: #000000;
+    transition: 0.3s;
+    text-shadow: 1px 1px #adadad;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -846,6 +925,23 @@ body {
 
         .course-register-form input {
             width: 60vw;
+        }
+
+        .sitemap-items {
+            margin-right: 0;
+        }
+
+        .sitemap-items li {
+            padding: 5px;
+        }
+
+        .sitemap-items a {
+            font-size: 1rem;
+        }
+
+        .sitemap-category {
+            margin: 0;
+            flex-direction: column;
         }
     }
 }

@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>title</title>
+    <title>Privacy Policy</title>
 </head>
 
 <body>
@@ -31,16 +32,61 @@
     </nav>
 
     <section>
-        
+        <div class="privacy-policy-container">
+            <div class="privacy-policy-heading">
+                <h1>Privacy Policy</h1>
+            </div>
+            <div class="privacy-policy-accordion">
+
+                <h3 class="accordion-header">Information Collection and Use</h3>
+                <p class="accordion-content">For a better experience while using our Service,
+                    we may require you to provide us with certain personally identifiable information,
+                    including but not limited to your name, phone number, and postal address.
+                    The information that we collect will be used to contact or identify you.</p>
+
+                <h3 class="accordion-header">Log Data</h3>
+                <p class="accordion-content">We want to inform you that whenever you visit our Service,
+                    we collect information that your browser sends to us that is called Log Data.
+                    This Log Data may include information such as your computer’s Internet Protocol ("IP") address,
+                    browser version, pages of our Service that you visit, the time and date of your visit,
+                    the time spent on those pages, and other statistics.</p>
+
+                <h3 class="accordion-header">Cookies</h3>
+                <p class="accordion-content">Cookies are files with a small amount of data that are commonly used as
+                    anonymous unique
+                    identifiers.
+                    These are sent to your browser from the website that you visit and are stored on your computer’s
+                    hard drive.</p>
+
+                <h3 class="accordion-header">Service Providers</h3>
+                <p class="accordion-content">We may employ third-party companies and individuals due to the following reasons:
+                    To facilitate our Service; To provide the Service on our behalf; To perform Service-related services; or
+                    To assist us in analyzing how our Service is used.</p>
+                    
+                <h3 class="accordion-header">Security</h3>
+                <p class="accordion-content">We value your trust in providing us your Personal Information, 
+                    thus we are striving to use commercially acceptable means of protecting it. 
+                    But remember that no method of transmission over the internet, 
+                    or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+
+
+
+            </div>
+        </div>
+
     </section>
 
     <footer class="footer">
         <div class="footer-section">
             <div class="social-links">
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img src="twitter.svg" alt="twitter icon"></a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="youtube.svg" alt="youtube icon"></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="instagram.svg" alt="instagram icon"></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="linkedin.svg" alt="linkedin icon"></a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img src="twitter.svg"
+                        alt="twitter icon"></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="youtube.svg"
+                        alt="youtube icon"></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="instagram.svg"
+                        alt="instagram icon"></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="linkedin.svg"
+                        alt="linkedin icon"></a>
             </div>
             <div class="footer-home-icon">
                 <a href="index.html">ABC</a>
@@ -72,6 +118,15 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".privacy-policy-accordion").accordion({
+            collapsible: true,
+            active: false
+        });
+    });
+</script>
 <script>
     $(document).ready(function () {
         $("#burger-menu").click(function () {
