@@ -716,7 +716,9 @@ body {
 
 /* Privacy policy page */
 .privacy-policy-container {
-    margin: 2rem;
+    width: 70vw;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .privacy-policy-heading {
@@ -908,6 +910,20 @@ body {
 
         .hero-text p {
             font-size: 0.9rem;
+        }
+
+        .testimonials-container {
+            margin: 1rem;
+        }
+
+        .testimonials-heading {
+            font-size: 1rem;
+            margin: 1rem;
+        }
+
+        .testimonials-grid {
+            display: flex;
+            flex-direction: column;
         }
 
         .contact-container {
