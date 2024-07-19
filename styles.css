@@ -736,6 +736,11 @@ body {
     margin-bottom: 2rem;
 }
 
+.ui-accordion .ui-accordion-header.ui-accordion-header-active {
+    background-color: #d2d2d2;
+    color: #000000;
+}
+
 /* Sitemap page */
 .sitemap-container {
     margin: 2rem;
