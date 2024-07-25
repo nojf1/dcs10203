@@ -408,6 +408,36 @@ body {
     transition: 0.3s;
 }
 
+.course-item-button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+#course-item-learn-more-button {
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+#course-item-learn-more-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+}
+
+#course-item-learn-more-button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#course-item-learn-more-button a:hover {
+    color: #000000;
+    transition: 0.3s;
+}
+
+
+
 /* Course registration */
 .course-register-heading {
     text-align: center;
@@ -942,6 +972,13 @@ body {
             flex-direction: column;
             margin: 0;
             padding: 0;
+        }
+
+        .course-item-button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
         }
 
         .course-register-form input {
