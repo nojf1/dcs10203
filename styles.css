@@ -436,7 +436,101 @@ body {
     transition: 0.3s;
 }
 
+#button-black {
+    border: 1px solid #000000;
+    background-color: #000000;
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
 
+#button-black:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+}
+
+#button-black a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#button-black a:hover {
+    color: #000000;
+    transition: 0.3s;
+}
+
+/* Course details */
+.course-details-container {
+    margin: 3rem;
+}
+
+.course-details-heading-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.course-details-heading {
+    width: 70vw;
+    font-size: 1.2rem;
+}
+
+.course-details-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.course-details-img {
+    width: 20vw;
+    height: fit-content;
+    overflow: hidden;
+    margin: 2rem;
+    vertical-align: top;
+}
+
+.course-details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.course-details-content-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    margin: 1rem 0;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-details-content-item h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.4rem 1rem;
+    border-bottom: 1px solid #d1d1d1;
+    background-color: #f1f1f1;
+}
+
+.course-details-content p {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.course-details-content ul {
+    list-style:decimal;
+    font-size: 1.1rem;
+}
+
+.course-details-content li {
+    padding: 1rem;
+}
 
 /* Course registration */
 .course-register-heading {
@@ -917,6 +1011,10 @@ body {
         width: 60vw;
     }
 
+    .course-details-heading {
+        width: 60vw;
+    }
+
     .signin-form input {
         width: 60vw;
     }
@@ -983,6 +1081,14 @@ body {
 
         .course-register-form input {
             width: 60vw;
+        }
+
+        .course-details-heading {
+            width: 60vw;
+        }
+
+        .course-details-img {
+            visibility: hidden;
         }
 
         .sitemap-items {
