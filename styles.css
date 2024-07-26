@@ -973,6 +973,37 @@ body {
     text-shadow: 1px 1px #adadad;
 }
 
+/* user details */
+.user-details-container {
+    margin: 3rem;
+}
+#userDetailsTable {
+    width: 100%;
+    max-width: 80vw;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#userDetailsTable th, #userDetailsTable td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+#userDetailsTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#userDetailsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#userDetailsTable tr:hover {
+    background-color: #f1f1f1;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .header-nav {
@@ -1170,3 +1201,4 @@ body {
         }
     }
 }
+
