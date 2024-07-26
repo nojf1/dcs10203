@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>Register an Account</title>
+    <title>Courses</title>
 </head>
 
 <body>
@@ -30,44 +30,56 @@
         </ul>
     </nav>
 
-    <section>
-        <div class="register-account-container">
-            <div class="register-account-heading">
-                <h1>Register</h1>
-                <p>Register an account to access our courses</p>
-            </div>
-            <form action="" id="register-account-form" class="register-account-form-container">
-                <div class="register-account-form">
-                    <label for="username">Username</label>
-                    <input type="username" id="username" name="username" placeholder="Username" autocomplete="username" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="terms" name="terms" required> 
-                        <label for="terms">I agree to the terms and conditions</label>
-                    </div>
-                    <button type="submit">Register</button>
-                </div>
-            </form>
-        </div>
-    
+    <section class="course-schedule-container">
+        <h1>Course Schedule</h1>
+        <table class="course-schedule-table">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Structuring with HTML</td>
+                    <td>1 January 2025</td>
+                    <td>28 February 2025</td>
+                    <td>8 weeks</td>
+                </tr>
+                <tr>
+                    <td>Learning Microsoft Word</td>
+                    <td>1 March 2025</td>
+                    <td>30 April 2025</td>
+                    <td>8 weeks</td>
+                </tr>
+                <tr>
+                    <td>Programming in JavaScript</td>
+                    <td>1 May 2025</td>
+                    <td>30 June 2025</td>
+                    <td>8 weeks</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="button-white"><a href="course-schedule-p1.html">Previous page</a></button>
     </section>
 
     <footer class="footer">
         <div class="footer-section">
             <div class="social-links">
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img src="twitter.svg" alt="twitter icon"></a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="youtube.svg" alt="youtube icon"></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="instagram.svg" alt="instagram icon"></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="linkedin.svg" alt="linkedin icon"></a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img src="twitter.svg"
+                        alt="twitter icon"></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="youtube.svg"
+                        alt="youtube icon"></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="instagram.svg"
+                        alt="instagram icon"></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="linkedin.svg"
+                        alt="linkedin icon"></a>
             </div>
             <div class="footer-home-icon">
                 <a href="index.html">ABC</a>
-                <p>&copy; 2024 ABC Learning Center</p>
+                <p>©Copyright 2024 ABC Learning Center</p>
             </div>
         </div>
         <div class="quick-links">
@@ -92,16 +104,15 @@
             </ul>
         </div>
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#burger-menu").click(function () {
-                $(".nav-menu").slideToggle("fast");
-            });
-        });
-    </script>
-    <script src="script.js"></script>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#burger-menu").click(function () {
+            $(".nav-menu").slideToggle("fast");
+        });
+    });
+</script>
 
 </html>

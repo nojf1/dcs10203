@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="script" href="script.js">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>Register an Account</title>
+    <title>Registration Success</title>
 </head>
 
 <body>
@@ -33,28 +34,13 @@
     <section>
         <div class="register-account-container">
             <div class="register-account-heading">
-                <h1>Register</h1>
-                <p>Register an account to access our courses</p>
+                <h1>Account Registration Success!</h1>
+                <p>Account registration was successful.</p>
             </div>
-            <form action="" id="register-account-form" class="register-account-form-container">
-                <div class="register-account-form">
-                    <label for="username">Username</label>
-                    <input type="username" id="username" name="username" placeholder="Username" autocomplete="username" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="terms" name="terms" required> 
-                        <label for="terms">I agree to the terms and conditions</label>
-                    </div>
-                    <button type="submit">Register</button>
-                </div>
-            </form>
+
         </div>
-    
+        
+        
     </section>
 
     <footer class="footer">
@@ -67,7 +53,7 @@
             </div>
             <div class="footer-home-icon">
                 <a href="index.html">ABC</a>
-                <p>&copy; 2024 ABC Learning Center</p>
+                <p>©Copyright 2024 ABC Learning Center</p>
             </div>
         </div>
         <div class="quick-links">
@@ -92,16 +78,15 @@
             </ul>
         </div>
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#burger-menu").click(function () {
-                $(".nav-menu").slideToggle("fast");
-            });
-        });
-    </script>
-    <script src="script.js"></script>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#burger-menu").click(function () {
+            $(".nav-menu").slideToggle("fast");
+        });
+    });
+</script>
 
 </html>

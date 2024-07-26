@@ -429,6 +429,7 @@ body {
 #course-item-learn-more-button a {
     color: #ffffff;
     text-decoration: none;
+
 }
 
 #course-item-learn-more-button a:hover {
@@ -459,6 +460,33 @@ body {
     color: #000000;
     transition: 0.3s;
 }
+
+#button-white {
+
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+
+}
+
+#button-white:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.3s;
+
+}
+
+#button-white a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#button-white a:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+
 
 /* Course details */
 .course-details-container {
@@ -531,6 +559,39 @@ body {
 .course-details-content li {
     padding: 1rem;
 }
+
+/* Course schedule */
+.course-schedule-container {
+    margin: 3rem;
+}
+
+.course-schedule-table {
+    width: 100%;
+    max-width: 100vw;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-schedule-table th, .course-schedule-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.course-schedule-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.course-schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.course-schedule-table tr:hover {
+    background-color: #f1f1f1;
+}
+
 
 /* Course registration */
 .course-register-heading {
