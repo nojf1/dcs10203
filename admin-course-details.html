@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>Sitemap</title>
+    <title>User Course Detail Management</title>
 </head>
 
 <body>
@@ -31,36 +31,56 @@
     </nav>
 
     <section>
-        <div class="sitemap-container">
-            <h1 class="sitemap-heading">Sitemap</h1>
-            <div class="sitemap-category">
-            <ul class="sitemap-items">
-                <li><strong>Courses</strong></li><br>
-                <li><a href="course-register.html">Programming in Java</a></li>
-                <li><a href="course-register.html">Programming in .NET</a></li>
-                <li><a href="course-register.html">Structuring with HTML</a></li>
-                <li><a href="course-register.html">Styling with CSS</a></li>
-                <li><a href="course-register.html">Learning Microsoft Word</a></li>
-                <li><a href="course-register.html">Programming in JavaScript</a></li>
-                <li><a href="courses.html"><u>See all</u></a></li>
-            </ul>
-            <ul class="sitemap-items">
-                <li><strong>Explore</strong></li><br>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-            </ul>
-            <ul class="sitemap-items">
-                <li><strong>Resources</strong></li><br>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="admin-user-details.html">Admin - Users</a></li>
-                <li><a href="admin-course-details.html">Admin - Course</a></li>
-                
-            </ul>
+        <div class="user-details-container">
+            <div class="user-details-heading">
+                <h1>Manage User Course Details</h1>
+                <p>View and manage user course enrollment details</p>
+                <p>To add a new user, ensure form is blank to start adding details and save</p>
+                <p>Click edit to edit user details in the form below</p>
             </div>
+            <h2>Add/Edit User Details</h2>
+            <form id="userDetailsForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" placeholder="Country" required>
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="Programming in Java">Programming in Java</option>
+                    <option value="Programming in .NET">Programming in .NET</option>
+                    <option value="Structuring with HTML">Structuring with HTML</option>
+                    <option value="Styling with CSS">Styling with CSS</option>
+                    <option value="Learning Microsoft Word">Learning Microsoft Word</option>
+                    <option value="Programming in JavaScript">Programming in JavaScript</option>
+                </select>
+                <button id="button-white" type="submit">Save</button>
+            </form>
+            <table id="userDetailsTable">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Country</th>
+                        <th>Course</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User details will be inserted here by JavaScript -->
+                </tbody>
+            </table>
         </div>
-
-        
     </section>
 
     <footer class="footer">
@@ -73,7 +93,7 @@
             </div>
             <div class="footer-home-icon">
                 <a href="index.html">ABC</a>
-                <p>©Copyright 2024 ABC Learning Center</p>
+                <p>&copy; 2024 ABC Learning Center</p>
             </div>
         </div>
         <div class="quick-links">
@@ -98,15 +118,16 @@
             </ul>
         </div>
     </footer>
-</body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $("#burger-menu").click(function () {
-            $(".nav-menu").slideToggle("fast");
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#burger-menu").click(function () {
+                $(".nav-menu").slideToggle("fast");
+            });
         });
-    });
-</script>
+    </script>
+    <script src="admin-course-details.js"></script>
+</body>
 
 </html>
