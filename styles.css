@@ -299,6 +299,7 @@ body {
     font-size: 1rem;
     padding: 1.2rem;
     margin: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* About Us page */
@@ -379,6 +380,7 @@ body {
     font-size: 1.2rem;
     padding: 2rem;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .course-item h2 {
@@ -443,12 +445,14 @@ body {
     padding: 4px 10px;
     font-size: 1.2rem;
     border-radius: 6px;
+    color: white;
 }
 
 #button-black:hover {
     background-color: #ffffff;
     color: #000000;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 #button-black a {
@@ -473,6 +477,7 @@ body {
     background-color: #000000;
     color: #ffffff;
     transition: 0.3s;
+    cursor: pointer;
 
 }
 
@@ -485,8 +490,6 @@ body {
     color: #ffffff;
     transition: 0.3s;
 }
-
-
 
 /* Course details */
 .course-details-container {
@@ -742,19 +745,24 @@ body {
 
 .checkbox-container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    margin: 10px 0;
 
+}
+
+.checkbox-container input {
+    margin: 0 10px 0 0;
+    width: fit-content;
+    vertical-align: bottom;
+}
+
+.checkbox-container label {
+    margin: 0;
 }
 
 .checkbox-container input[type="checkbox"] {
     width: fit-content;
     vertical-align: bottom;
-}
-
-.checkbox-container label[for="terms"] {
-    margin-top: 6px;
-    margin-right: 10px;
 }
 
 /* Signin page */
@@ -977,6 +985,43 @@ body {
 .user-details-container {
     margin: 3rem;
 }
+
+.user-details-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+#userDetailsForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    margin: 0;
+    width: fit-content;
+}
+
+#userDetailsForm label {
+    font-size: 1rem;
+    margin: 10px;
+    align-self: flex-start;
+}
+
+#userDetailsForm input {
+    padding: 0.4rem;
+    margin: 10px;
+    width: 30vw;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+}
+
+#userDetailsForm button {
+    padding: 0.4rem;
+    margin: 10px;
+}
+
 #userDetailsTable {
     width: 100%;
     max-width: 80vw;
@@ -1003,6 +1048,94 @@ body {
 #userDetailsTable tr:hover {
     background-color: #f1f1f1;
 }
+
+
+
+/* Enquire */
+.enquire-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.enquire-heading {
+    text-align: center;
+}
+
+.enquire-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 0;
+}
+
+.enquire-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.enquire-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    margin: 0;
+    width: fit-content;
+}
+
+.enquire-form label {
+    font-size: 1rem;
+    margin: 10px;
+    align-self: flex-start;
+}
+
+.enquire-form input {
+    padding: 0.4rem;
+    margin: 10px;
+    width: 30vw;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+}
+
+.enquire-form button {
+    padding: 0.4rem;
+    margin: 10px;
+    border: 1.5px solid rgb(71, 71, 71);
+    border-radius: 6px;
+    background-color: #000000;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.enquire-form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.enquire-form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.enquire-form .checkbox-container input {
+    margin: 0 10px 0 0;
+}
+
+.enquire-form .checkbox-container label {
+    margin: 0;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {

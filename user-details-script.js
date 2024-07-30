@@ -1,20 +1,80 @@
-// Function to display user details
-function displayuserDetails() {
-    const userDetails = JSON.parse(localStorage.getItem('userDetails')) || [];
-    const tableBody = document.getElementById('userDetailsTable').getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = '';
+document.addEventListener('DOMContentLoaded', function () {
+    displayUserDetails();
 
-    userDetails.forEach(accountDetails => {
-        const newRow = tableBody.insertRow();
+    // Add event listener for the user details form submission
+    document.getElementById('userDetailsForm').addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        const usernameCell = newRow.insertCell(0);
-        const emailCell = newRow.insertCell(1);
-        const passwordCell = newRow.insertCell(2);
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const phone = document.getElementById('phone').value.trim();
 
-        usernameCell.innerHTML = accountDetails.username;
-        emailCell.innerHTML = accountDetails.email;
-        passwordCell.innerHTML = accountDetails.password;
+        if (username === '' || email === '' || password === '' || address === '' || phone === '') {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        const userDetails = JSON.parse(localStorage.getItem('userDetails')) || [];
+        const existingUserIndex = userDetails.findIndex(user => user.email === email);
+
+        if (existingUserIndex > -1) {
+            userDetails[existingUserIndex] = { username, email, password, address, phone };
+        } else {
+            userDetails.push({ username, email, password, address, phone });
+        }
+
+        localStorage.setItem('userDetails', JSON.stringify(userDetails));
+        displayUserDetails();
+        document.getElementById('userDetailsForm').reset();
     });
-}
 
-document.addEventListener('DOMContentLoaded', displayuserDetails);
+    // Function to display user details
+    function displayUserDetails() {
+        const userDetails = JSON.parse(localStorage.getItem('userDetails')) || [];
+        const tableBody = document.getElementById('userDetailsTable').getElementsByTagName('tbody')[0];
+        tableBody.innerHTML = '';
+
+        userDetails.forEach((accountDetails, index) => {
+            const newRow = tableBody.insertRow();
+
+            const usernameCell = newRow.insertCell(0);
+            const emailCell = newRow.insertCell(1);
+            const passwordCell = newRow.insertCell(2);
+            const addressCell = newRow.insertCell(3);
+            const phoneCell = newRow.insertCell(4);
+            const actionCell = newRow.insertCell(5);
+
+            usernameCell.innerHTML = accountDetails.username;
+            emailCell.innerHTML = accountDetails.email;
+            passwordCell.innerHTML = accountDetails.password;
+            addressCell.innerHTML = accountDetails.address;
+            phoneCell.innerHTML = accountDetails.phone;
+            actionCell.innerHTML = `
+                <button id="button-white" onclick="editUser(${index})">Edit</button>
+                <button id="button-black" onclick="deleteUser(${index})">Delete</button>
+            `;
+        });
+    }
+
+    // Function to edit user details
+    window.editUser = function (index) {
+        const userDetails = JSON.parse(localStorage.getItem('userDetails')) || [];
+        const user = userDetails[index];
+
+        document.getElementById('username').value = user.username;
+        document.getElementById('email').value = user.email;
+        document.getElementById('password').value = user.password;
+        document.getElementById('address').value = user.address;
+        document.getElementById('phone').value = user.phone;
+    };
+
+    // Function to delete user details
+    window.deleteUser = function (index) {
+        let userDetails = JSON.parse(localStorage.getItem('userDetails')) || [];
+        userDetails.splice(index, 1);
+        localStorage.setItem('userDetails', JSON.stringify(userDetails));
+        displayUserDetails();
+    };
+});

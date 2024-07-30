@@ -21,7 +21,7 @@
         </div>
         <ul class="nav-menu">
             <li id="home"><a href="index.html">ABC</a></li>
-            <li id="enquire-now"><a href="">Enquire Now</a></li>
+            <li id="enquire-now"><a href="enquire.html">Enquire Now</a></li>
             <li><a href="about-us.html">About</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="course-register.html">Course Registration</a></li>
@@ -36,6 +36,8 @@
             <div class="register-account-heading">
                 <h1>Account Sign-in Success!</h1>
                 <p>Account sign-in was successful.</p>
+                <p>You will be redirected back to index in <span id="countdown">5</span></p>
+                <p>Click <a href="index.html">here</a> if you are not redirected.</p>
             </div>
 
         </div>
@@ -87,6 +89,23 @@
             $(".nav-menu").slideToggle("fast");
         });
     });
+</script>
+<script>
+    let countdownElement = document.getElementById('countdown');
+    let countdownValue = 5;
+
+    let countdownTimer = setInterval(function () {
+        countdownValue--;
+        countdownElement.textContent = countdownValue;
+
+        if (countdownValue <= 0) {
+            clearInterval(countdownTimer);
+        }
+    }, 1000);
+
+    setTimeout(function () {
+        window.location.href = "index.html";
+    }, 5000); 
 </script>
 
 </html>
